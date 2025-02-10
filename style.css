@@ -10,7 +10,7 @@
     height: 100vh;  
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
-
+    gap: 20%;
     font-style: normal;
     
  
@@ -21,15 +21,17 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 16%;
-   
+    list-style: none;
     padding-left: 0rem;
 }
 ul li a{
     text-decoration: none;
    
     list-style: none;
+    color: rgb(80, 78, 78);
 
 }
+
 .nav {
     display: flex;
     /* width: 100vw; */
@@ -40,7 +42,12 @@ ul li a{
 
    /* align-content: center; */
 }
-
+.name{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 8px;
+}
 .nav-right {
     display: flex;
     flex-direction: row;
@@ -51,16 +58,19 @@ ul li a{
 }
 .body-part{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 20%;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+   
 }
-img{
+.image > img{
     border-radius: 60%;
-    height: 50%;
-    width: 230px;
-}
-.image {
-    
+    height: 180px;
+    width: 200px;
+   justify-self: center;
 }
