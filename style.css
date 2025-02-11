@@ -73,3 +73,125 @@
     background-color: white;
     color: #1a1a1a;
 }
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-nav .nav-link i {
+    color: white;
+}
+button > .navbar-toggler-icon {
+    color: white;
+    background-color: #007bff;
+}
+/* Navigation */
+.navbar {
+    background: #181818;
+    padding: 15px 0;
+}
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.navbar-nav .nav-link {
+    color: #ccc;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: #1a1a1a;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 0;
+    background: #fff;
+}
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.skill-list span {
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    background: #fff;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea {
+    width: 40%;
+    padding: 10px;
+    align-self: center;
+    border: 1px solid #ccc;
+}
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+#sndmsg{
+    width: 50%;
+    align-self: center;
+}
+/* Footer */
+.footer {
+    background: #181818;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
