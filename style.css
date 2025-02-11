@@ -1,76 +1,75 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-.container-fluid {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;  
-    font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
-    gap: 20%;
-    font-style: normal;
-    
- 
+    font-family: 'Quicksand', sans-serif;
 }
 
-
-ul {
-    display: flex;
-    flex-direction: row;
-    gap: 16%;
-    list-style: none;
-    padding-left: 0rem;
+/* Navigation */
+.navbar {
+    background: #181818;
+    padding: 15px 0;
 }
-ul li a{
-    text-decoration: none;
-   
-    list-style: none;
-    color: rgb(80, 78, 78);
-
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.navbar-nav .nav-link {
+    color: #ccc;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+    color: #fff;
 }
 
-.nav {
-    display: flex;
-    /* width: 100vw; */
-    flex-direction: row;
-    justify-content: space-around;
-    height: 20%;
-    align-items: center;
-
-   /* align-content: center; */
-}
-.name{
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 8px;
-}
-.nav-right {
-    display: flex;
-    flex-direction: row;
-
-   
-
-
-}
-.body-part{
-    display: flex;
-    flex-direction: row;
-    height: 20%;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
+/* Hero Section */
+.hero {
+    background: #1a1a1a;
+    color: white;
+    padding: 80px 0;
     text-align: center;
-    gap: 50px;
-   
 }
-.image > img{
-    border-radius: 60%;
+.profile-image img {
+    width: 180px;
     height: 180px;
-    width: 200px;
-   justify-self: center;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    margin-bottom: 15px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.hero h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #b0b0b0;
+}
+.buttons {
+    margin-top: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+}
+.btn-outline-light:hover {
+    background-color: white;
+    color: #1a1a1a;
 }
