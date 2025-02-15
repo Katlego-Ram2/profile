@@ -38,6 +38,7 @@
             </div>
         </div>
     </nav>
+ 
 
     <!-- Hero Section -->
     <section class="hero">
@@ -56,6 +57,7 @@
 
     <!-- About Me Section -->
     <section id="about" class="about">
+        
         <div class="container text-center">
             <h2>About Me</h2>
             <p>I am a passionate software developer specializing in Java Spring Boot, PHP, and Angular. I enjoy creating scalable applications and solving complex problems with efficient code.</p>
@@ -73,45 +75,98 @@
                 <span>Angular</span>
                 <span>MySQL</span>
                 <span>JavaScript</span>
-                <span>React</span>
+                <span>GitHub</span>
                 <span>Express.js</span>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container text-center">
-            <h2>Projects</h2>
+   <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container text-center">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <button class="btn btn-outline-primary" id="prevProject">&#10094;</button>
             <div class="project-grid">
                 <div class="project">
                     <h4>Movie Ticket Booking System</h4>
                     <p>A web-based ticket booking platform with MySQL and PHP.</p>
+                    <a href="https://github.com/Katlego-Ram2/cinema" target="_blank" class="btn btn-primary">GitHub Repo</a>
                 </div>
                 <div class="project">
                     <h4>Inventory Management</h4>
                     <p>An Angular and Java Spring Boot application for inventory tracking.</p>
+                    <a href="https://github.com/yourgithub/inventory-management" target="_blank" class="btn btn-primary">GitHub Repo</a>
                 </div>
                 <div class="project">
                     <h4>E-commerce Website</h4>
-                    <p>A complete React and Express.js online store with payment integration.</p>
+                    <p>A complete Angular and Express.js online store with payment integration.</p>
+                    <a href="https://github.com/yourgithub/ecommerce-site" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                </div>
+                <div class="project">
+                    <h4>Curriculum Vitae Generator  Website</h4>
+                    <p>A  PHP and JavaScript online Curriculum Vitae Generator.</p>
+                    <a href="https://github.com/Katlego-Ram2/cvgenerator" target="_blank" class="btn btn-primary">GitHub Repo</a>
                 </div>
             </div>
+            <button class="btn btn-outline-primary" id="nextProject">&#10095;</button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container text-center">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" id="sndmsg" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentProject = 0;
+        const projects = document.querySelectorAll(".project");
+        const totalProjects = projects.length;
+        const projectsPerPage = 3;
+        
+        function showProjects(startIndex) {
+            projects.forEach((project, i) => {
+                project.style.display = (i >= startIndex && i < startIndex + projectsPerPage) ? "block" : "none";
+            });
+        }
+        
+        document.getElementById("prevProject").addEventListener("click", function () {
+            currentProject = (currentProject - projectsPerPage + totalProjects) % totalProjects;
+            showProjects(currentProject);
+        });
+        
+        document.getElementById("nextProject").addEventListener("click", function () {
+            currentProject = (currentProject + projectsPerPage) % totalProjects;
+            showProjects(currentProject);
+        });
+        
+        showProjects(currentProject);
+    });
+</script>
+
+<style>
+    .project-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .project {
+        display: none;
+        text-align: center;
+    }
+</style>
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container text-center">
+        <h2>Contact Me</h2>
+        <form action="mailto:rampedikatleho@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="sndmsg" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
