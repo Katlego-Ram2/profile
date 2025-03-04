@@ -49,7 +49,7 @@
             <h1>Katlego Rampedi</h1>
             <h4>Java Spring Boot, PHP & Angular Developer</h4>
             <div class="buttons">
-                <a href="CV.pdf" download class="btn btn-primary">Download CV</a>
+                <button onclick="downloadCV()" class="btn btn-primary">Download CV</button>
                 <a href="#contact" class="btn btn-outline-light">Contact Info</a>
             </div>
         </div>
@@ -140,6 +140,16 @@
         showProjects(currentProject);
     });
 </script>
+<script>
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = 'Assets/katlego-rampedi-my-cv.pdf';
+        link.download = 'katlego-rampedi-my-cv.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
 
 <style>
     .project-container {
